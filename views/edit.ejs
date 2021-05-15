@@ -1,0 +1,13 @@
+<%- include('partials/header') %>
+
+<form  method="POST" action="/comments/<%=c.id%>?_method=PATCH">>
+    <p>id=<%=c.id%></p>
+    <h1><%=c.username%></h1>
+    <textarea name="body" cols="30" rows="5"><%=c.body%></textarea>
+    <button>SUBMIT</button>
+</form>
+<script>
+    const inp=document.querySelector('form textarea');
+    inp.value="<%=c.body%>";
+</script>
+<%- include('partials/footer') %>

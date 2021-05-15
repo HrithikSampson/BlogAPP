@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+    
+        <section>
+            
+            <%for(let c of comments){%>
+                <div style="border-color: firebrick;padding: 40px;background-color:rgb(161, 255, 161)">
+                    <div style="background-color:blueviolet"><strong><%=c.username%></strong></div>    
+                    <div style="background-color: snow;">
+                        <div style="background-color:sandybrown;color:snow"><%=c.body.substring(0,60)%>...</div>
+                        <div style="background-color: snow;">
+                            <button style="position: absolute;"><a style="text-decoration: none;"href="/comments/<%=c.id%>">show</a></button>
+                            <button style="position: absolute;right:7vw"><a style="text-decoration: none;"href="/comments/<%=c.id%>/edit">edit</a></button>
+                        </div>
+                    </div>
+                </div>
+            <%}%>
+            <div id="newComment" style="background-color: seagreen;height: 100px;right:7vw;border-radius:50%;width:100px;text-align: center;;margin-right: 80px;position: relative;right: 120px;left:90vw;margin-top: 40px;margin-bottom: 40px;"><br>ADD NEW COMMENT</div>
+        </section>
+        <script src="./../js/newComment.js"></script>
+        <!--script>
+            const newComment=document.querySelector('#newComment');
+            newComment.onclick=()=>{
+                window.location.href="http://localhost:8844/comments/new";
+            }
+        </script-->
+<%- include('partials/footer') %>

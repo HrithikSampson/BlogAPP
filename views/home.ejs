@@ -1,0 +1,26 @@
+
+<%- include('partials/header') %>
+<form action='/user' method="GET">
+    <input type="text" placeholder="username" name="username">
+    <input type="text" placeholder="password" name="password">
+    <button>Submit</button>
+</form>
+<form action='/user' method="POST">
+    <input type="text" placeholder="username" name="username">
+    <input type="text" placeholder="password" name="password">
+    <button>Submit</button>
+</form>
+<div class="outer">
+    <div>
+        <h1>This is home Page</h1>
+        <p>HOME OF All Innovation<br>Lucky draw<br></p>
+        <ul>
+            <%for(let i=1;i<=3;i++){%>
+                <li>
+                    Pick <%=i+': Welcome to '+Math.floor(Math.random()*10+1)+str%>
+                </li>
+            <%}%>
+        </ul>
+    </div>
+</div>
+<%- include('partials/footer') %>
