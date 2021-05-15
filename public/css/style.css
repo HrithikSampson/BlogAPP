@@ -1,0 +1,20 @@
+body{
+    background-color: cadetblue;
+
+}
+.outer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.outer div:hover{
+    transform: scale(1.02);
+    
+}
+body div div{
+    padding: 20px;
+    background-color: greenyellow;
+}
+h8{
+    display: block;
+}
